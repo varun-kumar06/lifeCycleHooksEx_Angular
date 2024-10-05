@@ -1,0 +1,16 @@
+<p>form works!</p>
+
+
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="name" name="name">
+
+    <button (click)="submit()">Addname</button>
+
+
+<label>ShowList</label>
+<input type="checkbox"[(ngModel)]="showTable">
+<div *ngIf="showTable==true then list"></div>
+
+<ng-template #list>
+    <app-list [nameInput]="names"></app-list>
+</ng-template> 
